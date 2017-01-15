@@ -22,7 +22,7 @@ export class MessagesService {
 
   addMessage(newText: string){
     this.messages.push({ text: newText })
-      .then( _ => console.log(`${_} has been added succesfullu`))
+      .then( _ => console.log(`${_} has been added succesfully`))
       .catch( err => console.log(err));
   }
 

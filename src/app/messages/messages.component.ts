@@ -21,4 +21,8 @@ export class MessagesComponent implements OnInit {
     this.ms.updateMessage($key, newText);
   }
 
+  onCreated(newText:string){
+    this.ms.addMessage(newText);
+  }
+
 }

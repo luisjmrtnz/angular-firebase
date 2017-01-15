@@ -17,7 +17,7 @@ export class MessageComponent implements OnInit {
   ngOnInit() {
   }
 
-  update(newText){
+  update(newText: string){
     this.onUpdated.next(newText);
   }
 

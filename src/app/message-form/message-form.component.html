@@ -4,7 +4,8 @@
     <p class="form-control-static">New Message:</p>
   </div>
   <div class="form-group mx-sm-3">
-    <input type="text" class="form-control" placeholder="Whats on your mind?">
+    <input type="text" #inputText class="form-control" placeholder="Whats on your mind?">
   </div>
-  <button class="btn btn-primary">Add</button>
+  <button class="btn btn-primary"
+  (click)="createNew(inputText.value); inputText.value='' ">Add</button>
 </form>

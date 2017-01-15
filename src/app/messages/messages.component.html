@@ -1,5 +1,5 @@
 <div class="container">
-  <message-form></message-form>
+  <message-form (onCreated)="onCreated($event)"></message-form>
   <div class="card container-margin">
     <ul class="list-group list-group-flush">
       <li *ngFor="let message of messages$ | async"
