@@ -6,10 +6,12 @@ import { AngularFireModule } from 'angularfire2';
 import { CONFIG } from '../environments/firebaseconfig';
  
 import { AppComponent } from './app.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
