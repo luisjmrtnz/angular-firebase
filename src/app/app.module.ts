@@ -9,12 +9,14 @@ import { MessagesService } from './messages.service';
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageComponent } from './message/message.component';
+import { MessageFormComponent } from './message-form/message-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessagesComponent,
-    MessageComponent
+    MessageComponent,
+    MessageFormComponent
   ],
   imports: [
     BrowserModule,
