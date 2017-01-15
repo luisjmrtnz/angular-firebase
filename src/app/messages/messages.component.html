@@ -1,3 +1,5 @@
-<p>
-  messages works!
-</p>
+<ul>
+  <li *ngFor="let message of messages | async">
+    {{ message | json }}
+  </li>
+</ul>

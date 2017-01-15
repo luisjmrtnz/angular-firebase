@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseListObservable } from 'angularfire2';
+
+import { MessagesService } from '../messages.service';
 
 @Component({
   selector: 'messages',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
+  messages: FirebaseListObservable<any>;
 
-  constructor() { }
+  constructor( private ms: MessagesService ) { }
 
   ngOnInit() {
+    this.messages = this.ms.getAllMessages();
   }
 
 }
