@@ -26,5 +26,11 @@ export class MessagesService {
       .catch( err => console.log(err));
   }
 
+  deleteMessage($key){
+    this.messages.remove($key)
+      .then( _ => console.log(`${_} has been deleted`))
+      .catch( err => console.log(err));
+  }
+
 
 }

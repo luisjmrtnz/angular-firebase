@@ -5,7 +5,8 @@
       <li *ngFor="let message of messages$ | async"
           class="list-group-item">
           <message [messageText]="message.text"
-          (onUpdated)="onUpdated($event, message.$key)"></message>
+          (onUpdated)="onUpdated($event, message.$key)" 
+          (onDelete)="onDelete($event, message.$key)"></message>
       </li>
     </ul>
   </div>

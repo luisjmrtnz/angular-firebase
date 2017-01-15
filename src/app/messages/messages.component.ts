@@ -21,8 +21,12 @@ export class MessagesComponent implements OnInit {
     this.ms.updateMessage($key, newText);
   }
 
-  onCreated(newText:string){
+  onCreated(newText: string){
     this.ms.addMessage(newText);
+  }
+
+  onDelete($event: boolean, $key: string){
+    this.ms.deleteMessage($key);
   }
 
 }

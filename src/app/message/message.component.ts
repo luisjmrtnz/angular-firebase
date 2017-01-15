@@ -12,6 +12,9 @@ export class MessageComponent implements OnInit {
   @Output()
   onUpdated = new EventEmitter<string>();
 
+  @Output()
+  onDelete = new EventEmitter<boolean>();
+
   constructor() { }
 
   ngOnInit() {
@@ -19,6 +22,10 @@ export class MessageComponent implements OnInit {
 
   update(newText: string){
     this.onUpdated.next(newText);
+  }
+
+  delete(){
+    this.onDelete.next(true);
   }
 
 }
