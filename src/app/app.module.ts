@@ -8,11 +8,13 @@ import { CONFIG } from '../environments/firebaseconfig';
 import { MessagesService } from './messages.service'; 
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MessagesComponent
+    MessagesComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

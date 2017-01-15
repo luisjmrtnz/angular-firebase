@@ -1,0 +1,12 @@
+<div class="form-inline">
+  <div class="form-group">
+    <label class="sr-only">Message</label>
+    <p class="form-control-static">Message: </p>
+  </div>
+  <div class="form-group mx-sm-3">
+    <input type="text" 
+    class="form-control" 
+    [value]="messageText" #inputText>
+  </div>
+  <button (click)="update(inputText.value)" class="btn btn-primary">Update</button>
+</div>

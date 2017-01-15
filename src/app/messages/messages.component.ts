@@ -17,4 +17,8 @@ export class MessagesComponent implements OnInit {
     this.messages = this.ms.getAllMessages();
   }
 
+  onUpdated(newText: string){
+    console.log(newText);
+  }
+
 }

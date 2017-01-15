@@ -1,5 +1,11 @@
-<ul>
-  <li *ngFor="let message of messages | async">
-    {{ message | json }}
-  </li>
-</ul>
+<div class="container">
+  <div class="card">
+    <ul class="list-group list-group-flush">
+      <li *ngFor="let message of messages | async"
+          class="list-group-item">
+          <message [messageText]="message.text"
+          (onUpdated)="onUpdated($event)"></message>
+      </li>
+    </ul>
+  </div>
+</div>
