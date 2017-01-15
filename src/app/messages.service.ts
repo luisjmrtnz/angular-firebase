@@ -14,5 +14,11 @@ export class MessagesService {
     return this.messages;
   }
 
+  updateMessage($key:string, newText: string){
+    this.messages.update($key, {text: newText})
+      .then( _ => console.log("Updated succesfully"))
+      .catch( err => console.log(err));
+  }
+
 
 }

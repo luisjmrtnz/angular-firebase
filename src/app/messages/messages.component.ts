@@ -9,16 +9,16 @@ import { MessagesService } from '../messages.service';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
-  messages: FirebaseListObservable<any>;
+  messages$: FirebaseListObservable<any>;
 
   constructor( private ms: MessagesService ) { }
 
   ngOnInit() {
-    this.messages = this.ms.getAllMessages();
+    this.messages$ = this.ms.getAllMessages();
   }
 
-  onUpdated(newText: string){
-    console.log(newText);
+  onUpdated(newText: string, $key: string){
+    this.ms.updateMessage($key, newText);
   }
 
 }
