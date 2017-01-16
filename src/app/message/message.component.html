@@ -1,13 +1,13 @@
-<div class="form-inline">
-  <div class="form-group">
-    <label class="sr-only">Message</label>
-    <p class="form-control-static">Message: </p>
+<div class="card text-center container-margin">
+  <div class="card-header">
+    Message
   </div>
-  <div class="form-group mx-sm-3">
-    <input type="text" 
-    class="form-control" 
-    [value]="messageText" #inputText>
+  <div class="card-block">
+    <p class="card-text">{{ message.text }}</p>
+    <button (click)="update(inputText.value)" class="btn btn-primary">Update</button>
+    <button (click)="delete(message.$key)" class="btn btn-danger">Delete </button>
   </div>
-  <button (click)="update(inputText.value)" class="btn btn-primary">Update</button>
-  <button (click)="delete()" class="btn btn-danger">Delete </button>
+  <div class="card-footer text-muted">
+    {{ message.date | date: 'medium'}}
+  </div>
 </div>

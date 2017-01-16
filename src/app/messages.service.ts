@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { database } from 'firebase';
 
 @Injectable()
 export class MessagesService {
@@ -21,7 +22,7 @@ export class MessagesService {
   }
 
   addMessage(newText: string){
-    this.messages.push({ text: newText })
+    this.messages.push({ text: newText, date: database.ServerValue.TIMESTAMP })
       .then( _ => console.log(`${_} has been added succesfully`))
       .catch( err => console.log(err));
   }

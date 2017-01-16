@@ -1,13 +1,7 @@
 <div class="container">
   <message-form (onCreated)="onCreated($event)"></message-form>
-  <div class="card container-margin">
-    <ul class="list-group list-group-flush">
-      <li *ngFor="let message of messages$ | async"
-          class="list-group-item">
-          <message [messageText]="message.text"
-          (onUpdated)="onUpdated($event, message.$key)" 
-          (onDelete)="onDelete($event, message.$key)"></message>
-      </li>
-    </ul>
-  </div>
+  <message *ngFor="let message of messages$ | async"
+        [message]="message"
+        (onUpdated)="onUpdated($event, message.$key)" 
+        (onDelete)="onDelete($event)"></message>
 </div>

@@ -7,13 +7,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class MessageComponent implements OnInit {
   @Input()
-  messageText: string;
+  message: any;
 
   @Output()
   onUpdated = new EventEmitter<string>();
 
   @Output()
-  onDelete = new EventEmitter<boolean>();
+  onDelete = new EventEmitter<string>();
 
   constructor() { }
 
@@ -24,8 +24,8 @@ export class MessageComponent implements OnInit {
     this.onUpdated.next(newText);
   }
 
-  delete(){
-    this.onDelete.next(true);
+  delete($key: string){
+    this.onDelete.next($key);
   }
 
 }
